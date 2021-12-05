@@ -1,0 +1,43 @@
+user_input = input("do you want to use calculator?? \n Y/y/Yes/yes for use \n other key for exit\n")
+while user_input in ('y', 'Y', "Yes", "yes"):
+    print("Operations:\n", "+ for Addition\n", "- for Subtraction\n",
+          "* for multiplication\n", "/ for divide\n", "** for square\n")
+    print("Enter the operation from above options")
+    op = input()
+    if op in ("*", "+", "-", "/", "**"):
+        print("Enter the 1st value")
+        i = input()
+        if i.isnumeric():
+            a = int(i)
+            print("Enter 2nd Value")
+            x = input()
+            if x.isnumeric():
+                b = int(x)
+                if a == 45 and b == 3 and op == "*":
+                    print("555")
+                elif a == 56 and b == 9 and op == "+":
+                    print("77")
+                elif a == 56 and b == 6 and op == "/":
+                    print("4")
+                elif op == "*":
+                    print(a * b)
+                elif op == "+":
+                    print(a + b)
+                elif op == "-":
+                    print(a - b)
+                elif op == "/":
+                    print(a / b)
+                elif op == "**":
+                    print(a ** b)
+                else:
+                    print("solution not possible")
+            else:
+                print("Please enter numeric value")
+        else:
+            print("Please enter numeric value")
+    else:
+        print("please select from above operators, do not enter random stuff")
+    user_input = input("do you want to continue?? \n Y/Yes/y for continue \n n for exit\n")
+    # //if user_input != ('y', 'Y', "Yes", "yes"):
+    #     break
+print("Thank you")
